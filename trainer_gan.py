@@ -105,7 +105,7 @@ class GANTrainer(Seq2SeqTrainer):
 
             self.dis_optimizer = AdamW(optimizer_grouped_parameters, **optimizer_kwargs)
 
-        elif self.gan_training_state == 'adv':
+        elif self.gan_training_state == 'adv' or self.gan_training_state == None:
             param_optimizer = self.get_t5_params('none')
             no_decay = ['bias', 'LayerNorm.bias', 'LayerNorm.weight']
             optimizer_grouped_parameters = [

@@ -5,7 +5,7 @@ import numpy as np
 from datasets import load_dataset, load_metric
 from transformers import T5Tokenizer
 
-tokenizer = T5Tokenizer.from_pretrained('T5')
+tokenizer = T5Tokenizer.from_pretrained('t5-small')
 
 bleu_metric = load_metric("sacrebleu")
 rouge_metric = load_metric("rouge")

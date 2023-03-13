@@ -37,7 +37,7 @@ def get_samples():
 
 train_samples, dev_samples, candidate_pool = get_samples()
 
-model = HeroGAN.from_pretrained('T5')
+model = HeroGAN.from_pretrained('t5-small')
 
 model.config.max_length = 32
 
